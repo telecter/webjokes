@@ -10,11 +10,15 @@ function createCheckboxes() {
   for (let i = 0; i < r; i++) {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    if (i == r-1) {
-      checkbox.addEventListener("click", (e) => {
-        createCheckboxes();
-        checkbox.removeEventListener("click", this)
-      }, { once: true });
+    if (i == r - 1) {
+      checkbox.addEventListener(
+        "click",
+        (e) => {
+          createCheckboxes();
+          checkbox.removeEventListener("click", this);
+        },
+        { once: true }
+      );
     }
     container.appendChild(checkbox);
   }
