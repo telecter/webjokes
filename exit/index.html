@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.svg">
+    <title>Exit</title>
+    <style>
+        .clickable {
+            cursor: pointer;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #exit {
+            width: 100px;
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <small><a href="../">back</a></small>
+    <img src="./exit.svg" alt="Exit sign" class="clickable" id="exit">
+
+    <dialog id="exited">
+        <h1>You exited.</h1>
+        <p>
+            Congratulations! You reached the exit.
+            <br>
+            <i>How did you even do that?</i>
+        </p>
+        <button onclick="location.href = '../'">Exit</button>
+    </dialog>
+
+    <script>
+        const sign = document.getElementById("exit");
+
+        let speed = 3.5;
+        let dx = speed;
+        let dy = speed;
+
+        let x = 0;
+        let y = 0;
+
+        sign.onmouseover = () => {
+            x = Math.floor(Math.random() * (window.innerWidth - 100))
+            y = Math.floor(Math.random() * (window.innerHeight - 50))
+            dy = -dy;
+            dx = -dx;
+        }
+
+        sign.onclick = () => {
+            document.getElementById("exited").showModal();
+        }
+
+
+        function update() {
+            requestAnimationFrame(update);
+            if (x + 100 > window.innerWidth || x < 0) {
+                dx = -dx;
+            }
+            if (y + 50 > window.innerHeight || y < 0) {
+                dy = -dy;
+            }
+            x += dx;
+            y += dy;
+            sign.style.transform = `translate(${x}px, ${y}px)`
+
+        }
+
+        requestAnimationFrame(update);
+    </script>
+</body>
+
+</html>

@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>"
-    />
-    <title>webjokes</title>
-  </head>
-  <body>
-    <header>
-      <h1>webjokes</h1>
-      <p>Random things I wanted to put on the web.</p>
-    </header>
-    <main>
-      <article>
-        <h3><a href="./checkbox">checkbox</a></h3>
-        <p>Make sure to check all the boxes.</p>
-      </article>
-      <article>
-        <h3><a href="#" onclick="window.open('./open')">open</a></h3>
-        <p>Try to open this page (good luck).</p>
-      </article>
-    </main>
-    <footer>
-      <a href="/">back</a>
-    </footer>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./index.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>" />
+  <title>webjokes</title>
+</head>
+
+<body>
+  <header>
+    <h1>🌐 webjokes</h1>
+    <p>Random things I wanted to put on the web.</p>
+  </header>
+  <main class="text-center">
+    <div class="card dim-hover">
+      <h3><a href="./checkbox">✅ checkbox</a></h3>
+      <p>Make sure to check all the boxes.</p>
+    </div>
+    <div class="card dim-hover">
+      <h3><a href="#" onclick="window.open('./open')">➚ open</a></h3>
+      <p>Try to open this page (good luck).</p>
+    </div>
+    <div class="card dim-hover">
+      <h3><a href="./exit"><img src="./exit/favicon.svg" alt="Exit icon" width="20" style="vertical-align: middle;">
+          exit</a></h3>
+      <p>Exit the website.</p>
+    </div>
+  </main>
+  <footer class="text-center">
+    <a href="/">back</a>
+  </footer>
+</body>
+
 </html>

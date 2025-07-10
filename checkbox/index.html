@@ -3,20 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+    <link rel="stylesheet" href="../index.css">
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✅</text></svg>"
     />
-    <script src="./main.js" defer></script>
+    <script src="/checkbox/main.js" defer></script>
+    <style>
+      input[type=checkbox] {
+        transform: scale(1.5);
+        margin: 0.5rem;
+      }
+    </style>
     <title>checkbox</title>
   </head>
   <body>
     <header>
-      <h2>checkbox</h2>
+      <h1>✅ checkbox</h1>
       <p>Make sure to check all the boxes!</p>
+      <div class="card">
+        <p>You have checked <strong id="stats">0</strong> boxes,</p>
+        <p>and spent <strong id="seconds">0</strong> seconds here.</p>
+      </div>
     </header>
-    <main>
+  
+    <main class="text-center">
       <div id="checkbox-container"></div>
     </main>
   </body>
